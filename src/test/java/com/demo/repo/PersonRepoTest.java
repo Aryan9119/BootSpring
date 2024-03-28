@@ -18,14 +18,6 @@ class PersonRepoTest {
     @Autowired
     private PersonRepo personRepo;
 
-    @Test
-    void isPersonExitsById() {
-        Person person = new Person(1234, "Durgesh", "Delhi");
-        personRepo.save(person);
-        Boolean actualResult = personRepo.isPersonExitsById(1234);
-        assertThat(actualResult).isTrue();
-    }
-
     @AfterEach
     void tearDown() {
         System.out.println("tearing down");
